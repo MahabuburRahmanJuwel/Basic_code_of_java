@@ -1,0 +1,69 @@
+
+package newname;
+
+import java.util.Scanner;
+
+
+public class Newname {
+
+    
+    public static void main(String[] args) {
+        
+        int k,k1,k2,i;
+        
+       System.out.println("hello world");
+       Scanner in =new Scanner(System.in);
+      /* k=in.nextInt();
+       k1=in.nextInt();
+       k2=in.nextInt();*/
+         int arrex[] = new int[3];
+       
+       for(i=0;i<3;i++){
+           
+          arrex[i]=in.nextInt();   
+  }    
+       
+       mix(arrex);
+       
+       min(arrex);
+       
+       sort(arrex);
+       
+  }
+   static int mix(int arra[]){
+        
+        if(arra[0]>arra[1] && arra[0]>arra[2]) return arra[0];
+           if(arra[1]>arra[0] && arra[1]>arra[2]) return arra[1];
+           else  return arra[2];
+    }
+    
+    
+      int min(int arra[]){
+        
+        if(arra[0]<arra[1] && arra[0]<arra[2]) return arra[0];
+           if(arra[1]<arra[0] && arra[1]<arra[2]) return arra[1];
+           else  return arra[1];
+    }
+    
+      public static void sort (int arra[]){
+    
+    int i,j,temp;
+          for(i=0;i!=arra.length;i++){
+            j=i++;  
+          
+   if(arra[j]>arra[i]){
+       
+      temp= arra[j];
+      arra[j]=arra[i];
+      arra[i]=temp;
+   
+   }
+          }
+         for(i=0;i!=arra.length;i++){
+             System.out.println(arra[i]);
+         }
+          
+      }
+      
+      
+}

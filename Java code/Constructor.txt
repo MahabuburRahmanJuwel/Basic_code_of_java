@@ -1,0 +1,57 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author bus// 
+//http://codeforces.com/contest/935/problem/A
+ */
+import java.util.Scanner;
+
+
+
+
+public class NewClass {
+    
+    public static void main (String args[]){
+        
+        Scanner in=new Scanner (System.in);
+        
+        int r,input;
+        System.out.println("please Enter 1 if you arre want to know area of a circle or 2 know rectangle circle");
+        input=in.nextInt();
+        
+       if(input==1){
+      
+       r=in.nextInt();
+           area b=new area(r);
+       }
+       if(input==2){
+            int len,wid;
+        len=in.nextInt();
+        wid=in.nextInt();
+        
+           area a=new area(len,wid);
+       }
+    }
+  
+}
+      class area{
+
+area(int r){
+double circle,pi=Math.acos(-1.0);
+
+System.out.println("area of a circle :" +(r*r*pi));
+}
+area(int len,int wid){
+
+    
+    System.out.println("area of a rectangle :" +(len*wid));
+    
+}
+
+
+}

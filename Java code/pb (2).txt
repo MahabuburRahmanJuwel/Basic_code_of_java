@@ -1,0 +1,51 @@
+
+import java.util.Scanner;
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author bus
+ */
+public class NewClass {
+    
+    public static void main(String[] args){
+        
+        
+        int i,j,k,m,sum=0,val = 0,count=0;
+       double mean=0;
+        Scanner in = new Scanner(System.in);
+        k=in.nextInt();
+       // val=in.nextInt();
+       m=k;
+      int n[]= new int[m];
+     
+    
+      for(i=0;i<m;i++){
+          
+          n[i]=in.nextInt();
+          sum=sum+n[i];
+      }
+      mean =(double) (sum/m);
+      
+      
+    /*  for (i=0;i<m;i++){
+          for (j=i+1;j<m;j++){
+              
+              if(n[i]==n[j] ){
+                  count ++;
+                  val=n[i];
+              }
+          }
+          
+      }*/
+      
+      System.out.print("mean : "  + mean );
+      // System.out.print("mode : " + val );
+    }
+    
+}

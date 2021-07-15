@@ -1,0 +1,54 @@
+
+package intheritence;
+
+import java.util.Scanner;
+
+
+public class Intheritence {
+
+   
+    public static void main(String[] args) {
+        Scanner in=new Scanner(System.in);
+        
+        int a,b,c;
+        a=in.nextInt();
+        b=in.nextInt();
+        c=in.nextInt();
+        
+        B box=new B();
+        box.set(a,b);
+        box.set_k(c);
+        box.show();
+        box.sum();
+        // box.sum();
+    }
+    
+}
+
+class A{
+    int i,j;
+    void set (int i ,int j){
+        this.i=i;
+        this.j=j;
+    }
+    void show(){
+        System.out.println("value of i :"+i);   
+        System.out.println("value of j :"+j);  
+    }
+}
+
+class B extends A{
+    int k;
+    void set_k(int k)
+    {
+        this.k=k;
+        
+    }
+    
+    void sum(){
+        int sum=0;
+        sum=i+j+k;
+        System.out.println("the sum value: " +sum);
+          System.out.println("the value of k: " +k);
+    }
+}

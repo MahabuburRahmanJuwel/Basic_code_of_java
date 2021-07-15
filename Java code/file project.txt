@@ -1,0 +1,73 @@
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+//import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.PrintWriter;
+//import static java.util.Arrays.stream;
+//import java.util.Formatter;
+import java.util.Scanner;
+
+
+ 
+
+public class File1 {
+    public static void main (String[] args) throws  IOException{
+        String path;
+    File folder=new File("C:/Users/DELL/Desktop/information");
+    folder.mkdir();
+    path=folder.getAbsolutePath();
+        System.out.println(folder.getAbsolutePath());
+        System.out.println(folder.getName());
+    
+       File file= new File(path +"/student.txt");
+       file.createNewFile();
+      File file1= new File(path +"/teacher.txt");
+        file1.createNewFile();
+        int i,num;
+        Scanner input=new Scanner (System.in);
+        System.out.print("how many student : ");
+        num=input.nextInt();
+       
+        FileWriter filewriter=new FileWriter (file,true);
+        BufferedWriter  Buffer= new  BufferedWriter (filewriter);
+        PrintWriter printwriter =new  PrintWriter(Buffer);
+        
+       // printwriter.println("      name " +"   "+"      id "  +"   " +"        cgpa ");
+       // printwriter.close();
+for(i=1;i<=num;i++){
+    String name,id;
+    float cgpa;
+    System.out.println("Name:");
+    name=input.next();
+    System.out.println("ID:");
+    id=input.next();
+    System.out.println("cgpa:");
+    cgpa=input.nextFloat();
+    printwriter.println(name +" "+id +" "+cgpa);
+   printwriter.close();
+}
+
+FileWriter filewriter_t=new FileWriter (file1,true);
+        BufferedWriter  Buffer_t= new  BufferedWriter (filewriter_t);
+        PrintWriter printwriter_t =new  PrintWriter(Buffer_t);
+        
+        
+        System.out.print("how many teacher : ");
+        num=input.nextInt();
+        
+        for(i=1;i<=num;i++){
+    String name,id;
+    float cgpa;
+    System.out.println("teacher Name:");
+    name=input.next();
+    System.out.println("teacher ID:");
+    id=input.next();
+ printwriter_t.println(name +" "+id );
+   printwriter_t.close();
+}
+
+
+}
+}

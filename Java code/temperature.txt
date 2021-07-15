@@ -1,0 +1,44 @@
+import java.util.Scanner;
+public class NewClass {
+    
+     public static void main(String[] args) {
+     
+       System.out.println("hello world");
+       Scanner in =new Scanner(System.in);
+       
+      temp_conversion temp = new temp_conversion();
+      
+   
+   System.out.println( temp.cel_to_far(100));
+           
+        System.out.println( temp.far_to_cel(100));   
+       
+      }
+
+}
+
+
+class temp_conversion {
+    
+    double cel_to_far(double c){
+        
+        int m=9/5;
+        double Fer;
+        Fer=c*m+32;
+        
+        return Fer;
+        
+    }
+     double far_to_cel(double c){
+        
+                int m=5/9;
+                double cel;
+        cel=(c-32)*m;
+        
+        return cel;
+        
+    }
+    
+    
+    
+}

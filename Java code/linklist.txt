@@ -1,0 +1,65 @@
+#include<stdlib.h>
+#include<stdio.h>
+#include<string.h>
+struct student{
+char name[25];
+ int age;
+ char id[9];
+  struct student *next;
+ struct student *prev;
+};
+struct student *head = NULL, *tail= NULL;
+
+void create_node(char name[],int Ag,char id[]){
+
+struct student *link = (struct student*) malloc(sizeof(struct student));
+ strcpy( link->name,name);
+
+ link->age=Ag;
+strcpy(link->id,id);
+
+link->prev=NULL;
+link->next=NULL;
+ if(head==NULL)
+      {
+        head=link;//printf("5\n");
+        tail=link;//printf("6\n");
+        link=NULL;//printf("7\n");
+      }
+      else
+      {
+        tail->next=link;
+        tail=link;
+      }
+}
+
+  void display()
+  {
+   struct  student *temp=(struct student*) malloc(sizeof(struct student));
+    temp=head;
+    printf("\n");
+    printf(" Display :---------->>>>>>>\n");
+    while(temp!=NULL)
+    {
+     printf("name = %s\n AGE = %d\n  id=%s\n",temp->name,temp->age,temp->id);
+      temp=temp->next;
+    }
+     printf(" -----------*****---------");
+  }
+int main(){
+    int i,j;
+
+char name[25];
+char id2[9];
+int Age;
+printf("Enter student name :->");
+gets(name);
+printf("Enter student Age :->");
+scanf("%d",&Age);
+printf("Enter student Id :->");
+scanf("%s",id2);
+create_node(name,Age,id2);
+display();
+return 0;
+
+}

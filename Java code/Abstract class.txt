@@ -1,0 +1,46 @@
+package hello;
+
+
+// declaring abstract class
+
+ abstract class Abst {
+
+	void print () {
+		System.out.println ("hello world from Abstract");
+	}
+	
+	abstract  void  getdata(int data);
+		abstract void box();
+	
+	
+}
+
+//// Extends  class inherite Abst
+public class Extends extends Abst {
+
+	void getdata ( int cam) {
+		System.out.println ("hello from child");
+	}
+	
+	void box () {
+		 System.out.println("hello from box");
+	}
+	
+}
+
+
+/// main class
+public class hello {
+
+	public static void main (String[] args) {
+		
+		
+		 Extends ball = new Extends ();
+		 ball.box();
+		 ball.getdata(10);
+		Abst ball2 =new Extends ();
+		ball2.print();
+		
+	}
+
+}
